@@ -7,6 +7,7 @@ from werkzeug.utils import secure_filename
 from PIL import Image
 import pytesseract
 import oracledb
+import os
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Akhil\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
 
@@ -18,6 +19,10 @@ app.config['ORACLE_PORT'] = '1521'
 app.config['ORACLE_SERVICE'] = 'orclpdb'
 app.config['ORACLE_USER'] = 'admin1'
 app.config['ORACLE_PASSWORD'] = 'admin1'
+
+
+port = int(os.environ.get("PORT", 5000))
+app.run(host="0.0.0.0", port=port, debug=True)
 
 UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
