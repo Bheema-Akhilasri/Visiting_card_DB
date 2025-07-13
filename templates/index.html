@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISIDB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+  <div>
+    <!-- <img src="C:\Users\akhil\Desktop\project VISIDB\pixlr-image-generator-b8329159-2cbe-40e7-a1ac-2ad0e814d414.png" class="home-back-page position-relative" alt=""> -->
+    <img src="{{ url_for('static', filename='image/pixlr-image-generator-b8329159-2cbe-40e7-a1ac-2ad0e814d414.png') }}" class="home-back-page position-relative" alt="">
+    <div class="position-absolute components">
+      <nav class="navbar position-static bg-body-tertiary fixed-top">
+        <div class="container-fluid pe-5 ps-5 pt-3 pb-4 z-0 top-0 bg-warning">
+          <!-- <a class="navbar-brand fs-1 ms-5 heading" href="#" >VISIDB</a> -->
+          <div class="header-bar">
+            <img src="{{ url_for('static', filename='image/logo.png') }}" class="logo" alt="">
+            <h1 class="title">VISIDB</h1>
+          </div>
+
+          <form class="d-flex " role="search">
+            <!-- <a href="{{ url_for('index') }}"><img class="home img-fluid me-4 mt-2" src="C:\Users\akhil\Desktop\project VISIDB\home.svg" alt=""></a> -->
+            <a class="btn btn-secondary me-3 px-4 py-2" href="{{ url_for('login') }}">Login</a>
+            <a class="btn ms-3 me-5 px-4 py-2 btn-secondary" href="{{ url_for('register') }}">Register</a>
+          </form>
+        </div>
+      </nav>
+      <section class="d-flex ">
+        <div class="home-content">
+          <h2 class="home-heading text-body-warning">Welcome to VISIDB!!</h2>
+          <p class="home-para">Say goodbye to manual data entry!<br> Our innovative web application offers a seamless solution for digitizing and organizing your business contacts effortlessly.<br> With just a simple scan, transform traditional business cards into digital data stored securely in your database.</p>
+        </div>
+        <img class="img-fluid home_image rounded" src="{{ url_for('static', filename='image/pikaso_texttoimage_adorable-cartoon-style-one-person-giving-their-bus.jpeg') }}" alt=""> 
+      </section>
+    </div>
+    
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+  integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+  crossorigin="anonymous"></script>
+    
+    
+    
+</body>
+</html>
