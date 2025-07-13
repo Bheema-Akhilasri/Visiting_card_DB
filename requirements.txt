@@ -3,5 +3,4 @@ Werkzeug
 pillow
 pytesseract
 oracledb
-random
-re
+
