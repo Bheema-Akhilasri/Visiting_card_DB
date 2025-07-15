@@ -59,9 +59,13 @@
                     <input type="email" class="form-control mb-3" id="email" name="email" placeholder="Enter email" name="email">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter password"
-                        name="pswd"> 
+                    <input type="password" class="form-control" id="password" name="password"
+                            placeholder="Enter password" oninput="checkPassword()" required>
+                    <p id="password-warning" class="text-danger" style="display: none;">
+                        Password must be at least 8 characters long, contain 1 uppercase letter, 1 number, and 1 special character.
+                    </p>
                 </div>
+
                 <button type="submit" class="btn btn-primary mt-3 mb-3">Register</button>
                 <p class="bottom">Already have an account? <a class="bottom" href="{{url_for('login')}}"> Login here</a></p>
                     
@@ -104,5 +108,24 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 		crossorigin="anonymous"></script>
+    <script>
+        function checkPassword() {
+        const password = document.getElementById("password").value;
+        const warning = document.getElementById("password-warning");
+
+        const isValid =
+            password.length >= 8 &&
+            /[A-Z]/.test(password) &&
+            /\d/.test(password) &&
+            /[@$!%*?&]/.test(password);
+
+        if (!isValid && password !== "") {
+            warning.style.display = "block";
+        } else {
+            warning.style.display = "none";
+        }
+        }
+    </script>
+
 </body>
-</html> login.html
+</html>

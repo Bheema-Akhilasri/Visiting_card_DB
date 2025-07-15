@@ -2,5 +2,5 @@ Flask
 Werkzeug
 pillow
 pytesseract
-oracledb
+pymysql
 
