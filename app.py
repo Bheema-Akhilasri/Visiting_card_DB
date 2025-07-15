@@ -7,6 +7,7 @@ import re
 from werkzeug.utils import secure_filename
 from PIL import Image
 import pytesseract
+import os
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Akhil\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
 
@@ -308,4 +309,5 @@ def logout():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=True)
